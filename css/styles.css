@@ -4,6 +4,10 @@
   justify-content: center;
   height: 63px;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
 }
 .navbar .logo-container {
   display: flex;
@@ -107,7 +111,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2509803922);
+  z-index: 1;
+  position: relative;
+  height: 62.5px;
 }
 .location p {
   padding: 0;
@@ -128,6 +135,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #F3F3F3;
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 0;
 }
 .cta h1 {
   font-family: "Roboto", sans-serif;
@@ -161,17 +172,24 @@
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   background: linear-gradient(90deg, #9356DC 0%, #FF79DA 100%);
   width: 60%;
+  transition: opacity 0.3s ease-in-out;
 }
 .cta button:hover {
   cursor: pointer;
+  opacity: 0.8;
 }
 
+.explanation {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
 .explanation h2 {
   padding-left: 42px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 28.13px;
+  padding-bottom: 10px;
 }
 .explanation .card {
   display: flex;
@@ -194,7 +212,7 @@
   margin: 0 20px;
 }
 .explanation .card i {
-  margin: 0 20px;
+  margin: 0 0 0 40px;
 }
 .explanation .card .number {
   position: absolute;
@@ -204,8 +222,70 @@
   padding: 5px 10px;
   color: white;
 }
+.explanation .card:hover {
+  cursor: pointer;
+}
+.explanation .card:hover i {
+  color: var(--primary-color);
+}
 
-body {
+.restaurants h2 {
+  padding-left: 42px;
+}
+.restaurants a {
+  text-decoration: none;
+  color: black;
+  width: 90%;
+}
+.restaurants a .restaurant-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+  border-radius: 15px;
+  background-color: grey;
+  position: relative;
+}
+.restaurants a .restaurant-card .new {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #99E2D0;
+  color: #008766;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.41px;
+  text-align: center;
+}
+.restaurants a .restaurant-card .card-elements {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 15px 15px;
+}
+.restaurants a .restaurant-card .card-elements i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+.restaurants a .restaurant-card .txt-restaurant-card {
+  display: flex;
+  flex-direction: column;
+  padding-left: 13px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+body, h1, h2, h3, p {
   margin: 0;
 }
 
