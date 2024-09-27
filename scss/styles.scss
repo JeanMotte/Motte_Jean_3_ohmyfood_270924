@@ -1,16 +1,11 @@
-// GLOBAL
+// IMPORTS
 
-:root {
-  --primary-color: #9356DC;
-  --secondary-color: #FF79DA;
-  --third-color: #99E2D0;
-}
-
-.shrikhand-regular {
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-style: normal;
-}
+@import 'footer';
+@import 'navbar';
+@import 'restaurant-card';
+@import 'restaurant-menu';
+@import 'variables';
+@import 'fonts';
 
 //  MOBILE
 
