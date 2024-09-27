@@ -1,5 +1,27 @@
 //  MOBILE
 
+.navbar {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 63px;
+  width: 100%;
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 197px;
+      height:63px;
+
+
+      .logo {
+      width: 197px;
+      height:36px;
+      }
+    }
+}
+
 
 //  TABLETTE
 @media (min-width: 768px) {
