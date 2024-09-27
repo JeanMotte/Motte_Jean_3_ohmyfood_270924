@@ -1,12 +1,26 @@
-/* MOBILE */
+// GLOBAL
+
+:root {
+  --primary-color: #9356DC;
+  --secondary-color: #FF79DA;
+  --third-color: #99E2D0;
+}
+
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//  MOBILE
 
 
-/* TABLETTE */
+//  TABLETTE
 @media (min-width: 768px) {
 
 }
 
-/* DESKTOP */
+//  DESKTOP
 @media (min-width: 1024px) {
 
 }
