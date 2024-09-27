@@ -6,35 +6,12 @@
 @import 'restaurant-menu';
 @import 'variables';
 @import 'fonts';
+@import 'home';
 
 //  MOBILE
 
 body {
   margin: 0;
-}
-
-.location {
-  background-color: #EAEAEA;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 4px 4px 0px #00000040;
-
-  p {
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 18.75px;
-    color: #353535;
-  }
-
-  .fa-location-dot {
-    margin-right: 15px;
-    color: #353535;
-  }
-
 }
 
 //  TABLETTE
