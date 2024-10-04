@@ -1,5 +1,41 @@
 //  MOBILE
+footer {
+  background-color: #353535;
+  padding: 22px 25px 25px 25px;
+  width: 100%;
 
+  a {
+    display:block;
+  }
+  .block {
+    margin-bottom: 7px;
+    display: inline-block;
+  }
+
+  .footer-content-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+
+  .logo-footer {
+    width:139px;
+    height: 27px;
+    font-family: "Shrikhand", cursive;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+  }
+}
 
 //  TABLETTE
 @media (min-width: 768px) {

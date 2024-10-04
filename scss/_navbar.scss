@@ -17,11 +17,12 @@
       justify-content: center;
       width: 197px;
       height:63px;
-
+      text-decoration: none;
 
       .logo {
-      width: 197px;
-      height:36px;
+        font-family: "Shrikhand", cursive;
+        font-size: 30px;
+        color: black;
       }
     }
 }
