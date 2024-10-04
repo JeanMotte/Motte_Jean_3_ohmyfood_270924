@@ -304,12 +304,19 @@ footer .logo-footer {
   justify-content: space-between;
   border-radius: 0 0 15px 15px;
 }
-.restaurants a .restaurant-card .card-elements i {
+.restaurants a .restaurant-card .card-elements .heart-svg {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 25px;
-  -webkit-text-stroke: 1px background-color;
+}
+.restaurants a .restaurant-card .card-elements .heart-svg svg path {
+  fill: none;
+  transition: all 1s ease-in-out, stroke 0.5s ease-in-out;
+}
+.restaurants a .restaurant-card .card-elements .heart-svg svg:hover path {
+  stroke: url(#hoverGradient);
+  fill: url(#hoverGradient);
 }
 .restaurants a .restaurant-card h3 {
   padding-bottom: 3px;
@@ -336,6 +343,10 @@ img {
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body, h1, h2, h3, p {

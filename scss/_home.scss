@@ -183,15 +183,21 @@
       display: flex;
       justify-content: space-between;
       border-radius: 0 0 15px 15px;
-
-
-      i {
+      .heart-svg {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right: 25px;
-        -webkit-text-stroke: 1px background-color;
-        // color: transparent !important;
+
+        svg path {
+          fill:none;
+          transition: all 1s ease-in-out, stroke 0.5s ease-in-out;
+        }
+
+        svg:hover path {
+          stroke: url(#hoverGradient);
+          fill: url(#hoverGradient);
+        }
       }
 
     }
