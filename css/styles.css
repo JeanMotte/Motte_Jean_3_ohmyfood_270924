@@ -304,19 +304,11 @@ footer .logo-footer {
   justify-content: space-between;
   border-radius: 0 0 15px 15px;
 }
-.restaurants a .restaurant-card .card-elements .heart-svg {
+.restaurants a .restaurant-card .card-elements .heart-div {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 25px;
-}
-.restaurants a .restaurant-card .card-elements .heart-svg svg path {
-  fill: none;
-  transition: all 1s ease-in-out, stroke 0.5s ease-in-out;
-}
-.restaurants a .restaurant-card .card-elements .heart-svg svg:hover path {
-  stroke: url(#hoverGradient);
-  fill: url(#hoverGradient);
 }
 .restaurants a .restaurant-card h3 {
   padding-bottom: 3px;
@@ -340,6 +332,50 @@ img {
   height: 231px;
 }
 
+.checkbox-heart {
+  position: absolute;
+  transform: scale(0);
+}
+
+.checkbox-heart + label {
+  cursor: pointer;
+}
+
+.checkbox-heart:not(:checked) + label .full {
+  display: none;
+}
+
+.checkbox-heart:checked + label .empty {
+  display: none;
+}
+
+.full, .empty {
+  display: inline;
+  width: 25px;
+  height: 25px;
+  font-size: 25px;
+}
+
+.full {
+  color: red;
+}
+
+@keyframes animateBg {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% 100%;
+  }
+}
+@keyframes animateNoBg {
+  from {
+    background-position: 0% 100%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
