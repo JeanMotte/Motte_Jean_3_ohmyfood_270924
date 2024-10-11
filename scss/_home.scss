@@ -24,7 +24,6 @@
     margin-right: 15px;
     color: #353535;
   }
-
 }
 
 .cta {
@@ -33,7 +32,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:  #f6f6f6;
+  background-color: #f6f6f6;
   padding-bottom: 60px;
   position: relative;
   z-index: 0;
@@ -93,8 +92,8 @@
     font-size: 24px;
     line-height: 28.13px;
     padding-bottom: 10px;
-
   }
+
   .card {
     display: flex;
     flex-direction: row;
@@ -114,7 +113,6 @@
       line-height: 18.75px;
       text-align: center;
       margin: 0 20px;
-
     }
 
     i {
@@ -140,7 +138,6 @@
 }
 
 .restaurants {
-
   background-color: #F6F6F6;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -150,67 +147,67 @@
   }
 
   a {
-  text-decoration: none;
-  color: black;
-  width: 90%;
+    text-decoration: none;
+    color: black;
+    width: 90%;
 
-  .restaurant-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 20px;
-    border-radius: 15px;
-    background-color: white;
-    position: relative;
-    box-shadow: 0px 4px 15px 0px #0000001A;
-
-
-    .new {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background-color: #99E2D0;
-      color: #008766;
-      padding: 5px 10px;
-      border-radius: 3px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 16.41px;
-      text-align: center;
-    }
-
-    .card-elements {
-      display: flex;
-      justify-content: space-between;
-      border-radius: 0 0 15px 15px;
-      .heart-div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 25px;
-      }
-
-    }
-
-    h3 {
-      padding-bottom: 3px;
-    }
-
-    p {
-      font-size: 17px;
-      font-weight: 300;
-    }
-
-    .txt-restaurant-card {
+    .restaurant-card {
       display: flex;
       flex-direction: column;
-      padding-left: 13px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      justify-content: center;
+      margin: 20px;
+      border-radius: 15px;
+      background-color: white;
+      position: relative;
+      box-shadow: 0px 4px 15px 0px #0000001A;
+
+      .new {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: #99E2D0;
+        color: #008766;
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16.41px;
+        text-align: center;
+      }
+
+      .card-elements {
+        display: flex;
+        justify-content:space-between;
+        border-radius: 0 0 15px 15px;
+
+        .heart-div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+      }
+
+      h3 {
+        padding-bottom: 3px;
+      }
+
+      p {
+        font-size: 17px;
+        font-weight: 300;
+      }
+
+      .txt-restaurant-card {
+        display: flex;
+        flex-direction: column;
+        padding-left: 13px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
     }
   }
 }
-}
+
 img {
   width: 100%;
   object-fit: cover;
@@ -225,52 +222,65 @@ img {
   transform: scale(0);
 }
 
-.checkbox-heart + label {
+.hover-icon {
+  transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.checkbox-heart:not(:checked) + label .full {
-  display: none;
-}
-
-.checkbox-heart:checked + label .empty {
-  display: none;
-}
-
 .full, .empty {
-  display: inline;
+  position: absolute;
   width: 25px;
   height: 25px;
   font-size: 25px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  right:25px;
+  top:30px;
 }
 
-.checkbox-heart:checked + label .full {
-  animation: fillHeart 0.5s ease-in-out forwards;
+.full {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-position: 0% 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 100% 200%;
-  background-position: 0% 100%;  /* Start from the bottom */
 }
 
-.checkbox-heart:not(:checked) + label .empty {
-  animation: unfillHeart 0.5s ease-in-out forwards;
+.empty {
   background: black;
+  background-position: 0% 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 100% 200%;
-  background-position: 0% 0%;  /* Start from the top */
 }
 
-@keyframes unfillHeart {
-  from {
-    background-position: 0% 0%;
-  }
-  to {
-    background-position: 0% 100%;
-  }
+// When checkbox is checked, show the full heart with gradient fill animation
+.checkbox-heart:checked + label .full {
+  opacity: 1;
+  animation: fillHeart 0.5s forwards ease-in-out;
 }
 
+// When checkbox is unchecked, hide the full heart and reset the background
+.checkbox-heart:not(:checked) + label .full {
+  opacity: 0;
+  animation: unfillHeart 0.5s forwards ease-in-out;
+}
+
+// When checkbox is checked, unfill the empty heart
+.checkbox-heart:checked + label .empty {
+  opacity: 0;
+  animation: unfillHeart 0.5s forwards ease-in-out;
+}
+
+// When checkbox is unchecked, animate the empty heart (unfill)
+.checkbox-heart:not(:checked) + label .empty {
+  opacity: 1;
+  animation: fillHeart 0.5s forwards ease-in-out;
+}
+
+// Keyframe for filling the heart from bottom to top
 @keyframes fillHeart {
   from {
     background-position: 0% 100%;
@@ -280,12 +290,18 @@ img {
   }
 }
 
-//  TABLETTE
-@media (min-width: 768px) {
-
+// Keyframe for un-filling the heart from top to bottom
+@keyframes unfillHeart {
+  from {
+    background-position: 0% 0%; /* Start at the top */
+  }
+  to {
+    background-position: 0% 100%; /* End at the bottom */
+  }
 }
+
+//  TABLETTE
+@media (min-width: 768px) {}
 
 //  DESKTOP
-@media (min-width: 1024px) {
-
-}
+@media (min-width: 1024px) {}

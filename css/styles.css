@@ -308,7 +308,7 @@ footer .logo-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 25px;
+  position: relative;
 }
 .restaurants a .restaurant-card h3 {
   padding-bottom: 3px;
@@ -337,57 +337,74 @@ img {
   transform: scale(0);
 }
 
-.checkbox-heart + label {
+.hover-icon {
+  transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.checkbox-heart:not(:checked) + label .full {
-  display: none;
-}
-
-.checkbox-heart:checked + label .empty {
-  display: none;
-}
-
 .full, .empty {
-  display: inline;
+  position: absolute;
   width: 25px;
   height: 25px;
   font-size: 25px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  right: 25px;
+  top: 30px;
+}
+
+.full {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-position: 0% 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.empty {
+  background: black;
+  background-position: 0% 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .checkbox-heart:checked + label .full {
-  animation: fillHeart 0.5s ease-in-out forwards;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 100% 200%;
-  background-position: 0% 100%; /* Start from the bottom */
+  opacity: 1;
+  animation: fillHeart 0.5s forwards ease-in-out;
+}
+
+.checkbox-heart:not(:checked) + label .full {
+  opacity: 0;
+  animation: unfillHeart 0.5s forwards ease-in-out;
+}
+
+.checkbox-heart:checked + label .empty {
+  opacity: 0;
+  animation: unfillHeart 0.5s forwards ease-in-out;
 }
 
 .checkbox-heart:not(:checked) + label .empty {
-  animation: unfillHeart 0.5s ease-in-out forwards;
-  background: black;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 100% 200%;
-  background-position: 0% 0%; /* Start from the top */
+  opacity: 1;
+  animation: fillHeart 0.5s forwards ease-in-out;
 }
 
-@keyframes unfillHeart {
-  from {
-    background-position: 0% 0%;
-  }
-  to {
-    background-position: 0% 100%;
-  }
-}
 @keyframes fillHeart {
   from {
     background-position: 0% 100%;
   }
   to {
     background-position: 0% 0%;
+  }
+}
+@keyframes unfillHeart {
+  from {
+    background-position: 0% 0%; /* Start at the top */
+  }
+  to {
+    background-position: 0% 100%; /* End at the bottom */
   }
 }
 * {
