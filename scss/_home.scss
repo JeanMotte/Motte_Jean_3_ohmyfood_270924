@@ -244,11 +244,25 @@ img {
   font-size: 25px;
 }
 
-.full {
-  color: red;
+.checkbox-heart:checked + label .full {
+  animation: fillHeart 0.5s ease-in-out forwards;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100% 200%;
+  background-position: 0% 100%;  /* Start from the bottom */
 }
 
-@keyframes animateBg {
+.checkbox-heart:not(:checked) + label .empty {
+  animation: unfillHeart 0.5s ease-in-out forwards;
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100% 200%;
+  background-position: 0% 0%;  /* Start from the top */
+}
+
+@keyframes unfillHeart {
   from {
     background-position: 0% 0%;
   }
@@ -257,7 +271,7 @@ img {
   }
 }
 
-@keyframes animateNoBg {
+@keyframes fillHeart {
   from {
     background-position: 0% 100%;
   }
