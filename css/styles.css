@@ -202,7 +202,7 @@ footer .logo-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px black solid;
+  height: 69px;
   background-color: white;
 }
 .plate-card .title-description .title {
@@ -216,6 +216,22 @@ footer .logo-footer {
 .plate-card .price {
   font-size: 15px;
   font-weight: 700;
+  align-self: flex-end;
+}
+.plate-card .v-spin {
+  padding: 20px;
+  height: 100%;
+  background-color: #99E2D0;
+  border-radius: 0 14px 14px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.plate-card:not(.v-spin) {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
 }
 
 :root {
