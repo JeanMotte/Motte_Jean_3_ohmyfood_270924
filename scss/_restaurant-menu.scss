@@ -8,22 +8,44 @@
 
 .menu-container {
     h2 {
+        display: inline-block; /* Ensures the underline can be controlled */
+        position: relative;
         font-size: 16px;
         font-weight: 300;
         text-transform: uppercase;
         color: black;
-        text-decoration: underline;
-        text-underline-offset: 5px;
         padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    // Adjust the underline entrées/plats/desserts elements
+    h2::after {
+        content: ''; /* No actual content, only the underline */
+        position: absolute;
+        width: 60%; /* Adjust to control the length of the underline */
+        height: 3px; /* Thickness of the underline */
+        background-color: black; /* Color of the underline */
+        left: -0; /* Start the underline 10% before the text */
+        bottom: 3px; /* Position the underline below the text */
+        background-color: #99E2D0;
     }
 }
 
 .title-heart-container {
-    z-index: 1000;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding-bottom: 30px;
+    
+    .heart-div {
+        position: relative;
+
+        .full, .empty {
+            z-index: 1000;
+            top: -3px;
+            right: 0;
+            left:35px;
+        }
+    }
 }
 
 .background-menu-container {
@@ -34,6 +56,7 @@
     padding-top: 20px;
     font-family: "Shrikhand", cursive;
     font-weight: 400;
+    font-size: 28px;
 }
 
 .menu-container {
