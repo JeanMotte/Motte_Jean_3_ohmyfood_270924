@@ -242,7 +242,7 @@ img {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-position: 0% 100%;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -251,7 +251,7 @@ img {
   background: black;
   background-position: 0% 100%;
   opacity: 1;
-  transition: opacity 0.5s ease;
+  transition: opacity 1s ease;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -259,25 +259,25 @@ img {
 // When checkbox is checked, show the full heart with gradient fill animation
 .checkbox-heart:checked + label .full {
   opacity: 1;
-  animation: fillHeart 0.5s forwards ease-in-out;
+  animation: fillHeart 1s forwards ease-in-out;
 }
 
 // When checkbox is unchecked, hide the full heart and reset the background
 .checkbox-heart:not(:checked) + label .full {
   opacity: 0;
-  animation: unfillHeart 0.5s forwards ease-in-out;
+  animation: unfillHeart 1s forwards ease-in-out;
 }
 
 // When checkbox is checked, unfill the empty heart
 .checkbox-heart:checked + label .empty {
   opacity: 0;
-  animation: unfillHeart 0.5s forwards ease-in-out;
+  animation: unfillHeart 1s forwards ease-in-out;
 }
 
 // When checkbox is unchecked, animate the empty heart (unfill)
 .checkbox-heart:not(:checked) + label .empty {
   opacity: 1;
-  animation: fillHeart 0.5s forwards ease-in-out;
+  animation: fillHeart 1s forwards ease-in-out;
 }
 
 // Keyframe for filling the heart from bottom to top
