@@ -6,12 +6,68 @@
     object-fit: cover;
 }
 
+.menu-container {
+    h2 {
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: black;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        padding-bottom: 10px;
+    }
+}
+
 .title-heart-container {
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 30px;
 }
 
+.background-menu-container {
+    background-color: #F3F3F3;
+}
+
+.title-restaurant {
+    padding-top: 20px;
+    font-family: "Shrikhand", cursive;
+    font-weight: 400;
+}
+
+.menu-container {
+    padding-left: 17px;
+    padding-right: 17px;    
+}
+
+.plate-card {
+    padding: 7px;
+    box-shadow: 0px 4.01px 15.04px 0px #0000001A;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px black solid;
+    background-color: white;
+
+    .title-description {
+        .title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .description {
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+    }
+    .price {
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
 
 
 //  TABLETTE
