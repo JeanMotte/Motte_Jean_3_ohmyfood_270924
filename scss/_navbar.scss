@@ -1,7 +1,7 @@
 //  MOBILE
 
 .navbar {
-  display: flex;
+  display: flex;  
   align-content: center;
   justify-content: center;
   height: 63px;
@@ -25,6 +25,20 @@
         color: black;
       }
     }
+}
+
+.left-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 15px;
+  position: absolute;
+  top: calc(50% - 8px);
+
+  .fa-arrow-left {
+    font-size: 16px;
+    color: #353535;
+  }
 }
 
 

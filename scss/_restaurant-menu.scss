@@ -1,5 +1,18 @@
 //  MOBILE
 
+.img-restaurant-menu {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+}
+
+.title-heart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 
 //  TABLETTE
 @media (min-width: 768px) {
