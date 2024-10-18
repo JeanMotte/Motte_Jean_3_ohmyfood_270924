@@ -220,6 +220,7 @@ footer .logo-footer {
   white-space: nowrap;
   text-overflow: ellipsis;
   flex-shrink: 1;
+  transition: margin-right 0.4s ease-in-out;
 }
 .menu-item .plate-card .description-price {
   display: flex;
@@ -266,6 +267,7 @@ footer .logo-footer {
   overflow: hidden; /* Hide content if the width is 0 */
   transition: width 0.4s ease-in-out;
   flex-shrink: 0;
+  margin-left: 0;
 }
 .menu-item .plate-card:not(.v-spin) {
   padding-top: 0;
@@ -279,14 +281,20 @@ footer .logo-footer {
 .menu-item .toggle1:checked + label .plate-card .v-spin {
   width: 20%;
 }
-.menu-item .toggle1:checked + label .plate-card .price {
-  margin-right: calc(20% + 15px); /* Adjust the margin-right to account for .v-spin */
-}
 .menu-item .toggle1:not(:checked) + label .plate-card .v-spin {
   width: 0;
 }
+.menu-item .toggle1:checked + label .plate-card .title {
+  margin-right: calc(20% + 10px);
+}
+.menu-item .toggle1:not(:checked) + label .plate-card .title {
+  margin-right: 10px;
+}
 .menu-item .toggle1:not(:checked) + label .plate-card .price {
   margin-right: 15px;
+}
+.menu-item .toggle1:checked + label .plate-card .price {
+  margin-right: calc(20% + 15px);
 }
 
 :root {

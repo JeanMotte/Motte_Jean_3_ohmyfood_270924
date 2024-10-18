@@ -90,6 +90,7 @@
             white-space: nowrap;
             text-overflow: ellipsis;
             flex-shrink: 1;
+            transition: margin-right 0.4s ease-in-out;
         }
 
         .description-price {
@@ -141,6 +142,7 @@
             overflow: hidden; /* Hide content if the width is 0 */
             transition: width 0.4s ease-in-out;
             flex-shrink: 0;
+            margin-left: 0;
         }
     }
     
@@ -159,18 +161,26 @@
         width: 20%;
     }
 
-    .toggle1:checked + label .plate-card .price {
-        margin-right: calc(20% + 15px); /* Adjust the margin-right to account for .v-spin */
-    }
-
-    // When unchecked, hide .v-spin and reset margin-right of .price
     .toggle1:not(:checked) + label .plate-card .v-spin {
         width: 0;
+    }
+
+    .toggle1:checked + label .plate-card .title {
+        margin-right: calc(20% + 10px);
+    }
+
+    .toggle1:not(:checked) + label .plate-card .title {
+        margin-right: 10px;
     }
 
     .toggle1:not(:checked) + label .plate-card .price {
         margin-right: 15px;
     }
+
+    .toggle1:checked + label .plate-card .price {
+        margin-right: calc(20% + 15px);
+    }
+
 }
 
 //  TABLETTE
