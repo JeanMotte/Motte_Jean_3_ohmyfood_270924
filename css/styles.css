@@ -219,6 +219,7 @@ footer .logo-footer {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  flex-shrink: 1;
 }
 .menu-item .plate-card .description-price {
   display: flex;
@@ -264,6 +265,7 @@ footer .logo-footer {
   right: 0;
   overflow: hidden; /* Hide content if the width is 0 */
   transition: width 0.4s ease-in-out;
+  flex-shrink: 0;
 }
 .menu-item .plate-card:not(.v-spin) {
   padding-top: 0;

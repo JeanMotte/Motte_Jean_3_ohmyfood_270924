@@ -89,6 +89,7 @@
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            flex-shrink: 1;
         }
 
         .description-price {
@@ -139,6 +140,7 @@
             right: 0;
             overflow: hidden; /* Hide content if the width is 0 */
             transition: width 0.4s ease-in-out;
+            flex-shrink: 0;
         }
     }
     
