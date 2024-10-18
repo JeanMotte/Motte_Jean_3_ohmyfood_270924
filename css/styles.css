@@ -354,6 +354,49 @@ footer .logo-footer {
   margin-right: calc(20% + 15px);
 }
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.entrees, .plats, .desserts {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 2.5s ease-in-out;
+}
+
+.entrees, .plats, .desserts {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 3s ease-out, transform 0.6s ease-out;
+}
+
+.entrees:target, .plats:target, .desserts:target {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade-in effect triggered */
+.menu-container .entrees {
+  animation: fadeInLeft 3s ease-in-out forwards;
+  opacity: 1;
+}
+
+.menu-container .plats {
+  animation: fadeInLeft 4s ease-in-out forwards;
+  opacity: 1;
+}
+
+.menu-container .desserts {
+  animation: fadeInLeft 5s ease-in-out forwards;
+  opacity: 1;
+}
+
 :root {
   --primary-color: #9356DC;
   --secondary-color: #FF79DA;
