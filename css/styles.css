@@ -194,6 +194,8 @@ footer .logo-footer {
   padding-left: 17px;
   padding-right: 17px;
   padding-bottom: 30px;
+  z-index: 1000;
+  padding-top: 15px;
 }
 
 .menu-item {
@@ -205,39 +207,48 @@ footer .logo-footer {
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 15px;
   display: flex;
-  align-items: center;
-  height: 69px;
-  position: relative;
-  justify-content: space-between;
-}
-.menu-item .plate-card .title-description {
-  margin-left: 10px;
-  flex-grow: 1;
-  min-width: 0;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: 69px;
+  position: relative;
 }
-.menu-item .plate-card .title-description p {
+.menu-item .plate-card .title {
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 7px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu-item .plate-card .description-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  padding-left: 7px;
+  margin-top: 5px;
+}
+.menu-item .plate-card .description {
+  font-size: 15px;
+  font-weight: 300;
+  flex-grow: 1; /* Ensures the description takes available space */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu-item .plate-card p:not(.price) {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   margin: 0;
 }
-.menu-item .plate-card .title-description .title {
-  font-size: 18px;
-  font-weight: 500;
-}
-.menu-item .plate-card .title-description .description {
-  font-size: 15px;
-  font-weight: 300;
-}
 .menu-item .plate-card .price {
   font-size: 15px;
   font-weight: 700;
-  margin-right: 15px;
-  align-self: flex-end; /* Align price to the bottom of the plate-card */
+  margin-right: 30px;
+  margin-left: 10px;
+  white-space: nowrap;
+  align-self: flex-end;
   transition: margin-right 0.4s ease-in-out;
 }
 .menu-item .plate-card .v-spin {

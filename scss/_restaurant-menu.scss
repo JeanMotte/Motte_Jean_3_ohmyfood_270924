@@ -62,12 +62,13 @@
 .menu-container {
     padding-left: 17px;
     padding-right: 17px;
-    padding-bottom: 30px;    
+    padding-bottom: 30px;
+    z-index: 1000;
+    padding-top: 15px;
 }
 
 
 .menu-item {
-    // margin-bottom: 30px;
     background-color: white;
     border-radius: 15px;
 
@@ -76,44 +77,52 @@
         box-shadow: 0px 4.01px 15.04px 0px #0000001A;
         border-radius: 15px;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         height: 69px;
         position: relative;
-        justify-content: space-between;
 
-    
-        .title-description {
-            margin-left: 10px;
-            flex-grow: 1;
-            min-width: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-
-            p {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                margin: 0
-            }
-            .title {
-                font-size: 18px;
-                font-weight: 500;
-            }
-    
-            .description {
-                font-size: 15px;
-                font-weight: 300;
-                // margin-top: auto;
-            }
-    
+        .title {
+            font-size: 18px;
+            font-weight: 500;
+            padding-left: 7px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
+
+        .description-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
+            padding-left: 7px;
+            margin-top: 5px;
+        }
+
+        .description {
+            font-size: 15px;
+            font-weight: 300;
+            flex-grow: 1; /* Ensures the description takes available space */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        p:not(.price) {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin: 0;
+        }
+        
         .price {
             font-size: 15px;
             font-weight: 700;
-            margin-right: 15px;
-            align-self: flex-end; /* Align price to the bottom of the plate-card */
+            margin-right: 30px;
+            margin-left: 10px;
+            white-space: nowrap;
+            align-self: flex-end;
             transition: margin-right 0.4s ease-in-out;
         }
     
