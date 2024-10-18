@@ -35,15 +35,24 @@
     display: flex;
     align-items: center;
     padding-bottom: 30px;
+    justify-content: space-between;
+    margin-right: 20px;
+
+    .heart-div-container {
+        flex-shrink: 0;
+        width: 20px;
+        display: flex;
+        justify-content: center;
     
-    .heart-div {
+        .heart-div {
         position: relative;
 
-        .full, .empty {
+            .full, .empty {
             z-index: 1000;
             top: -3px;
             right: 0;
-            left:35px;
+            left:0;
+            }
         }
     }
 }
