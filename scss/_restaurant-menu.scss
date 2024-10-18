@@ -119,15 +119,6 @@
     margin-bottom: 40px;
 }
 
-.entrees, .plats, .desserts {
-    position: relative;
-    padding: 20px;
-    margin-bottom: 50px; /* Adds space between each section */
-    background-color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: add shadow for visual depth */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for scrolling effect */
-}
-
 .menu-item {
     background-color: white;
     border-radius: 15px;
@@ -251,6 +242,7 @@
     }
 
 }
+
 
 //  TABLETTE
 @media (min-width: 768px) {
