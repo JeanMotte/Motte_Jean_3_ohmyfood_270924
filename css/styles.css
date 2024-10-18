@@ -193,45 +193,87 @@ footer .logo-footer {
 .menu-container {
   padding-left: 17px;
   padding-right: 17px;
+  padding-bottom: 30px;
 }
 
-.plate-card {
+.menu-item {
+  background-color: white;
+  border-radius: 15px;
+}
+.menu-item .plate-card {
   padding: 7px;
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1019607843);
   border-radius: 15px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 69px;
-  background-color: white;
+  position: relative;
+  justify-content: space-between;
 }
-.plate-card .title-description .title {
+.menu-item .plate-card .title-description {
+  margin-left: 10px;
+  flex-grow: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.menu-item .plate-card .title-description p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+.menu-item .plate-card .title-description .title {
   font-size: 18px;
   font-weight: 500;
 }
-.plate-card .title-description .description {
+.menu-item .plate-card .title-description .description {
   font-size: 15px;
   font-weight: 300;
 }
-.plate-card .price {
+.menu-item .plate-card .price {
   font-size: 15px;
   font-weight: 700;
-  align-self: flex-end;
+  margin-right: 15px;
+  align-self: flex-end; /* Align price to the bottom of the plate-card */
+  transition: margin-right 0.4s ease-in-out;
 }
-.plate-card .v-spin {
-  padding: 20px;
+.menu-item .plate-card .v-spin {
+  width: 0;
   height: 100%;
   background-color: #99E2D0;
   border-radius: 0 14px 14px 0;
   color: white;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  overflow: hidden; /* Hide content if the width is 0 */
+  transition: width 0.4s ease-in-out;
 }
-
-.plate-card:not(.v-spin) {
+.menu-item .plate-card:not(.v-spin) {
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 0;
+}
+.menu-item #toggle1 {
+  opacity: 0;
+  position: absolute;
+}
+.menu-item .toggle1:checked + label .plate-card .v-spin {
+  width: 20%;
+}
+.menu-item .toggle1:checked + label .plate-card .price {
+  margin-right: calc(20% + 15px); /* Adjust the margin-right to account for .v-spin */
+}
+.menu-item .toggle1:not(:checked) + label .plate-card .v-spin {
+  width: 0;
+}
+.menu-item .toggle1:not(:checked) + label .plate-card .price {
+  margin-right: 15px;
 }
 
 :root {
