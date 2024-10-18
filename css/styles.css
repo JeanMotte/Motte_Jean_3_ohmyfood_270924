@@ -137,10 +137,24 @@ footer .logo-footer {
   height: 170px;
 }
 
+#main-container-menu {
+  background-color: #F3F3F3;
+}
+
 .img-restaurant-menu {
   width: 100%;
   height: 275px;
   object-fit: cover;
+  position: relative;
+  z-index: 0; /* Ensure the image stays behind the menu container */
+}
+
+.background-menu-container {
+  background-color: #F3F3F3;
+  position: relative;
+  top: -60px;
+  z-index: 1;
+  border-radius: 40px 40px 0 0;
 }
 
 .menu-container h2 {
@@ -185,10 +199,6 @@ footer .logo-footer {
   top: -3px;
   right: 0;
   left: 0;
-}
-
-.background-menu-container {
-  background-color: #F3F3F3;
 }
 
 .title-restaurant {
