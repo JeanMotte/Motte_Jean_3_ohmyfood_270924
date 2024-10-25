@@ -16,12 +16,13 @@
 .background-menu-container {
     background-color: #F3F3F3;
     position: relative;
-    top: -60px;
+    margin-top: -60px;
     z-index: 1;
     border-radius: 40px 40px 0 0;
 }
 
 .menu-container {
+    padding-bottom: 45px;
     h2 {
         display: inline-block; /* Ensures the underline can be controlled */
         position: relative;
@@ -50,14 +51,17 @@
     display: flex;
     align-items: center;
     padding-bottom: 30px;
-    justify-content: space-between;
-    margin-right: 20px;
+    justify-content: center;
+    // width: 95vw;
+    // max-width: 95vw;
+    // margin-left: calc(-50vw + 50%);
 
     .heart-div-container {
         flex-shrink: 0;
         width: 20px;
         display: flex;
         justify-content: center;
+        margin-left: 20px;
     
         .heart-div {
         position: relative;
@@ -92,7 +96,7 @@
         background: linear-gradient(90deg, #9356DC 0%, #FF79DA 100%);
         width: 186px;
         transition: opacity 0.3s ease-in-out;
-        margin-top: 45px;
+        margin-top: 35px;
     }
 }
 
@@ -288,11 +292,18 @@
 }
 
 //  TABLETTE
-@media (min-width: 768px) {
-
-}
+@media (min-width: 768px) {}
 
 //  DESKTOP
 @media (min-width: 1024px) {
-
+    .background-menu-container {
+        margin-inline: 180px;
+        
+        .menu-container {
+            margin-inline: 180px;
+        }
+    }
+    #main-container-menu {
+        background-color: #ffffff;
+    }
 }
