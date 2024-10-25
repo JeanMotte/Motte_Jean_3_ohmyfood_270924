@@ -220,12 +220,17 @@
 }
 
 //  TABLETTE
-@media (min-width: 768px) {
+@media (min-width: 768px) {}
+  
+  //  DESKTOP
+@media (min-width: 1024px) {
   .card {
     width: calc(100% / 3);
+    margin-block: 10px 15px !important;
   }
   .explanation {
     padding-inline: 180px;
+    padding-block:  40px 30px;
   }
   .explanation-card-container {
     display: flex;
@@ -233,6 +238,3 @@
     justify-content: space-around;
   }
 }
-
-//  DESKTOP
-@media (min-width: 1024px) {}
