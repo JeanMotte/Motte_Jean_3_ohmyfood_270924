@@ -76,12 +76,7 @@ footer .logo-footer {
 .restaurants h2 {
   padding-left: 20px;
 }
-.restaurants a {
-  text-decoration: none;
-  color: black;
-  width: 90%;
-}
-.restaurants a .restaurant-card {
+.restaurants .restaurant-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,7 +86,13 @@ footer .logo-footer {
   position: relative;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
-.restaurants a .restaurant-card .new {
+.restaurants .restaurant-card a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+.restaurants .restaurant-card a .new {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -104,25 +105,25 @@ footer .logo-footer {
   line-height: 16.41px;
   text-align: center;
 }
-.restaurants a .restaurant-card .card-elements {
+.restaurants .restaurant-card a .card-elements {
   display: flex;
   justify-content: space-between;
   border-radius: 0 0 15px 15px;
 }
-.restaurants a .restaurant-card .card-elements .heart-div {
+.restaurants .restaurant-card a .card-elements .heart-div {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-.restaurants a .restaurant-card h3 {
+.restaurants .restaurant-card a h3 {
   padding-bottom: 3px;
 }
-.restaurants a .restaurant-card p {
+.restaurants .restaurant-card a p {
   font-size: 17px;
   font-weight: 300;
 }
-.restaurants a .restaurant-card .txt-restaurant-card {
+.restaurants .restaurant-card a .txt-restaurant-card {
   display: flex;
   flex-direction: column;
   padding-left: 13px;
@@ -147,14 +148,11 @@ footer .logo-footer {
     row-gap: 15px;
     justify-content: space-around;
   }
-  .restaurants .restaurant-card-container a {
-    display: inline-block;
-    flex: 0 0 50%;
-    box-sizing: border-box;
-  }
-  .restaurants .restaurant-card-container a .restaurant-card {
+  .restaurants .restaurant-card-container .restaurant-card {
     height: 251px;
     width: 490px;
+    margin: 0;
+    flex: 0 0 50%;
   }
 }
 #main-container-menu {
