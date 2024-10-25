@@ -220,7 +220,19 @@
 }
 
 //  TABLETTE
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  .card {
+    width: calc(100% / 3);
+  }
+  .explanation {
+    padding-inline: 180px;
+  }
+  .explanation-card-container {
+    display: flex;
+    column-gap: 15px;
+    justify-content: space-around;
+  }
+}
 
 //  DESKTOP
 @media (min-width: 1024px) {}

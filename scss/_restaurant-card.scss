@@ -80,7 +80,27 @@
 
 //  TABLETTE
 @media (min-width: 768px) {
+  .restaurants {
+    padding-inline: 180px;
 
+    .restaurant-card-container {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 15px;
+      justify-content: space-around;
+    
+      a {
+        display: inline-block;
+        flex: 0 0 calc(100% / 2);
+        box-sizing: border-box;
+      
+      .restaurant-card {
+        height: 251px;
+        width: 490px;
+      }
+      }
+    }
+  }
 }
 
 //  DESKTOP
