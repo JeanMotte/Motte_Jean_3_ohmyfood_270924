@@ -2,7 +2,7 @@
 
 
 #main-container-menu {
-    background-color: #F3F3F3;
+    background-color: rgb(var(--background-two));
 }
 
 .img-restaurant-menu {
@@ -14,7 +14,7 @@
 }
 
 .background-menu-container {
-    background-color: #F3F3F3;
+    background-color: rgb(var(--background-two));
     position: relative;
     margin-top: -60px;
     z-index: 1;
@@ -43,7 +43,7 @@
         background-color: black; /* Color of the underline */
         left: -0; /* Start the underline 10% before the text */
         bottom: 3px; /* Position the underline below the text */
-        background-color: #99E2D0;
+        background-color: rgb(var(--slight-green));
     }
 }
 
@@ -90,7 +90,7 @@
         border-radius: 25px;
         border: none;
         box-shadow: 0px 4px 10px 0px #00000040;
-        background: linear-gradient(90deg, #9356DC 0%, #FF79DA 100%);
+        background: linear-gradient(90deg, rgb(var(--primary-color)) 0%, rgb(var(--secondary-color)) 100%);
         width: 186px;
         transition: opacity 0.3s ease-in-out;
         margin-top: 35px;
@@ -179,7 +179,7 @@
         .v-spin {
             width: 0;
             height: 100%;
-            background-color: #99E2D0;
+            background-color: rgb(var(--slight-green));
             border-radius: 0 14px 14px 0;
             color: white;
             display: flex;

@@ -7,7 +7,7 @@
 
 #loader {
     position: absolute;
-    color: #99E2D0;
+    color: rgb(var(--slight-green));
     width: 50px;
     height: 50px;
     font-size: 50px;
@@ -22,24 +22,24 @@
   @keyframes loaderSpin {
     0% {
       transform: rotate(0deg);
-      color: #99E2D0;
+      color: rgb(var(--slight-green));
     }
     25% {
       transform: rotate(180deg);
-      color:  #008766;
+      color:  rgb(var(--brown-green));
     }
     50% {
       transform: rotate(360deg);
-      color: #89C8FA;
+      color: rgb(var(--light-blue));
     }
     75% {
       transform: rotate(540deg);
-      color: #008766;
+      color: rgb(var(--brown-green));
       opacity: 1;
     }
     100% {
       transform: rotate(720deg);
-      color: #99E2D0;
+      color: rgb(var(--slight-green));
       opacity: 0;
     }
   }
