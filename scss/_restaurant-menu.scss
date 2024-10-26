@@ -105,7 +105,7 @@
     padding-top: 20px;
     font-family: "Shrikhand", cursive;
     font-weight: 400;
-    font-size: 28px;
+    font-size: clamp(1.5rem, 8vw, 1.75rem);
 }
 
 .menu-container {
