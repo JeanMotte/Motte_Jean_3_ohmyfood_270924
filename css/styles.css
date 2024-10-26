@@ -123,8 +123,8 @@ footer .logo-footer {
   position: absolute;
   top: 15px;
   right: 15px;
-  background-color: rgb(var(--slight-green));
-  color: rgb(var(--brown-green));
+  background-color: var(--slight-green);
+  color: var(--brown-green);
   padding: 5px 10px;
   border-radius: 3px;
   font-weight: 500;
@@ -189,7 +189,7 @@ footer .logo-footer {
   }
 }
 #main-container-menu {
-  background-color: rgb(var(--background-two));
+  background-color: var(--background-two);
 }
 
 .img-restaurant-menu {
@@ -201,7 +201,7 @@ footer .logo-footer {
 }
 
 .background-menu-container {
-  background-color: rgb(var(--background-two));
+  background-color: var(--background-two);
   position: relative;
   margin-top: -60px;
   z-index: 1;
@@ -229,7 +229,7 @@ footer .logo-footer {
   background-color: black; /* Color of the underline */
   left: 0; /* Start the underline 10% before the text */
   bottom: 3px; /* Position the underline below the text */
-  background-color: rgb(var(--slight-green));
+  background-color: var(--slight-green);
 }
 
 .title-heart-container {
@@ -272,7 +272,7 @@ footer .logo-footer {
   border-radius: 25px;
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  background: linear-gradient(90deg, rgb(var(--primary-color)) 0%, rgb(var(--secondary-color)) 100%);
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   width: 186px;
   transition: opacity 0.3s ease-in-out;
   margin-top: 35px;
@@ -355,7 +355,7 @@ footer .logo-footer {
 .menu-item .plate-card .v-spin {
   width: 0;
   height: 100%;
-  background-color: rgb(var(--slight-green));
+  background-color: var(--slight-green);
   border-radius: 0 14px 14px 0;
   color: white;
   display: flex;
@@ -619,7 +619,7 @@ footer .logo-footer {
   border-radius: 25px;
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  background: linear-gradient(90deg, rgb(var(--primary-color)) 0%, rgb(var(--secondary-color)) 100%);
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   width: 218px;
   transition: opacity 0.3s ease-in-out;
   margin-top: 30px;
@@ -698,7 +698,7 @@ footer .logo-footer {
 }
 
 .full {
-  background: linear-gradient(193.33deg, rgb(var(--primary-color)) -11.44%, rgb(var(--secondary-color)) 123.93%);
+  background: linear-gradient(193.33deg, var(--primary-color) -11.44%, var(--secondary-color) 123.93%);
   background-position: 0% 100%;
   opacity: 0;
   transition: opacity 1s ease;
@@ -775,7 +775,7 @@ footer .logo-footer {
 
 #loader {
   position: absolute;
-  color: rgb(var(--slight-green));
+  color: var(--slight-green);
   width: 50px;
   height: 50px;
   font-size: 50px;
@@ -790,24 +790,24 @@ footer .logo-footer {
 @keyframes loaderSpin {
   0% {
     transform: rotate(0deg);
-    color: rgb(var(--slight-green));
+    color: var(--slight-green);
   }
   25% {
     transform: rotate(180deg);
-    color: rgb(var(--brown-green));
+    color: var(--brown-green);
   }
   50% {
     transform: rotate(360deg);
-    color: rgb(var(--light-blue));
+    color: var(--light-blue);
   }
   75% {
     transform: rotate(540deg);
-    color: rgb(var(--brown-green));
+    color: var(--brown-green);
     opacity: 1;
   }
   100% {
     transform: rotate(720deg);
-    color: rgb(var(--slight-green));
+    color: var(--slight-green);
     opacity: 0;
   }
 }
