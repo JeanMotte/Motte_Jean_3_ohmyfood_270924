@@ -21,6 +21,7 @@
     border-radius: 40px 40px 0 0;
 }
 
+
 .menu-container {
     padding-bottom: 45px;
     h2 {
@@ -49,25 +50,28 @@
 
 .title-heart-container {
     display: flex;
-    align-items: center;
     padding-bottom: 30px;
     justify-content: center;
     column-gap: 20px;
 
     .heart-div-container {
-        width: 20px;
+        padding-top: 20px;
         display: flex;
         justify-content: center;
-        margin-left: 0px;
+        align-items: center;
     
         .heart-div {
         position: relative;
+        width: 24px;
+        height: 24px;
 
             .full, .empty {
             z-index: 1000;
-            top: -3px;
-            right: 0;
-            left:0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
             }
         }
     }
@@ -298,14 +302,6 @@
         .menu-container {
             margin-inline: 160px;
             padding-inline: 0;
-
-            .title-heart-container {
-                justify-content: center;
-
-                .heart-div-container {
-                    width: 50px;
-                }
-            }
         }
     }
     #main-container-menu {
