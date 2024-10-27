@@ -118,6 +118,7 @@
 }
 
 .menu-item {
+    position: relative;
     background-color: white;
     border-radius: 15px;
     margin-bottom: 10px;
@@ -211,32 +212,52 @@
     #toggle6, 
     #toggle7, 
     #toggle8,
-    #toggle9 {
+    #toggle9,
+    #toggle10 {
         opacity: 0;
         position: absolute;
     }
     
-    .toggle1:checked + label .plate-card .v-spin {
+    .toggle-label1,
+    .toggle-label2,
+    .toggle-label3,
+    .toggle-label4,
+    .toggle-label5,
+    .toggle-label6,
+    .toggle-label7,
+    .toggle-label8,
+    .toggle-label9,
+    .toggle-label10 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .toggle1:checked ~ .plate-card .v-spin {
         width: 20%;
     }
 
-    .toggle1:not(:checked) + label .plate-card .v-spin {
+    .toggle1:not(:checked) ~ .plate-card .v-spin {
         width: 0;
     }
 
-    .toggle1:checked + label .plate-card .title {
+    .toggle1:checked ~ .plate-card .title {
         margin-right: calc(20% + 10px);
     }
 
-    .toggle1:not(:checked) + label .plate-card .title {
+    .toggle1:not(:checked) ~ .plate-card .title {
         margin-right: 10px;
     }
 
-    .toggle1:not(:checked) + label .plate-card .price {
+    .toggle1:not(:checked) ~ .plate-card .price {
         margin-right: 15px;
     }
 
-    .toggle1:checked + label .plate-card .price {
+    .toggle1:checked ~ .plate-card .price {
         margin-right: calc(20% + 15px);
     }
 

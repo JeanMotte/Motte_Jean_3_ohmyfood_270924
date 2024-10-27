@@ -298,6 +298,7 @@ footer .logo-footer {
 }
 
 .menu-item {
+  position: relative;
   background-color: white;
   border-radius: 15px;
   margin-bottom: 10px;
@@ -383,26 +384,45 @@ footer .logo-footer {
 .menu-item #toggle6,
 .menu-item #toggle7,
 .menu-item #toggle8,
-.menu-item #toggle9 {
+.menu-item #toggle9,
+.menu-item #toggle10 {
   opacity: 0;
   position: absolute;
 }
-.menu-item .toggle1:checked + label .plate-card .v-spin {
+.menu-item .toggle-label1,
+.menu-item .toggle-label2,
+.menu-item .toggle-label3,
+.menu-item .toggle-label4,
+.menu-item .toggle-label5,
+.menu-item .toggle-label6,
+.menu-item .toggle-label7,
+.menu-item .toggle-label8,
+.menu-item .toggle-label9,
+.menu-item .toggle-label10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu-item .toggle1:checked ~ .plate-card .v-spin {
   width: 20%;
 }
-.menu-item .toggle1:not(:checked) + label .plate-card .v-spin {
+.menu-item .toggle1:not(:checked) ~ .plate-card .v-spin {
   width: 0;
 }
-.menu-item .toggle1:checked + label .plate-card .title {
+.menu-item .toggle1:checked ~ .plate-card .title {
   margin-right: calc(20% + 10px);
 }
-.menu-item .toggle1:not(:checked) + label .plate-card .title {
+.menu-item .toggle1:not(:checked) ~ .plate-card .title {
   margin-right: 10px;
 }
-.menu-item .toggle1:not(:checked) + label .plate-card .price {
+.menu-item .toggle1:not(:checked) ~ .plate-card .price {
   margin-right: 15px;
 }
-.menu-item .toggle1:checked + label .plate-card .price {
+.menu-item .toggle1:checked ~ .plate-card .price {
   margin-right: calc(20% + 15px);
 }
 
